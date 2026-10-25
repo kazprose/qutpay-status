@@ -66,7 +66,7 @@ i18n:
   sevenDays: 7 күн
   thirtyDays: 30 күн
   oneYear: 1 жыл
-  footer: "[Upptime]($UPPTIME_URL) арқылы, тарих [GitHub-та]($REPO_URL)"
+  footer: "[Upptime](https://upptime.js.org) арқылы, тарих [GitHub-та](https://github.com/kazprose/qutpay-status) · [qut.kz](https://qut.kz)"
 
 # Ақау туралы Telegram-ға хабар: репо secrets-іне NOTIFICATION_TELEGRAM_BOT_TOKEN және
 # NOTIFICATION_TELEGRAM_CHAT қосқан соң төмендегі екі жолды ашыңыз.
