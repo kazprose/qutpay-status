@@ -1,0 +1,76 @@
+# Qut Pay status page — Upptime (https://upptime.js.org)
+# Бұл файл GitHub-тағы `kazprose/qutpay-status` репосының түбірінде тұрады (infra/status/README.md).
+# Мониторлар GitHub Actions-та 5 минут сайын жүреді, тарих репоға коммит болады — тәуелсіз, ашық.
+owner: kazprose
+repo: qutpay-status
+
+sites:
+  - name: API (api.qut.kz/health)
+    url: https://api.qut.kz/health
+    expectedStatusCodes: [200]
+  - name: Сайт (qut.kz)
+    url: https://qut.kz/
+  - name: Кабинет (qut.kz/app/login)
+    url: https://qut.kz/app/login/
+  - name: Құжаттама (api.qut.kz/docs)
+    url: https://api.qut.kz/docs
+  - name: Төлем беті (qut.kz/pay)
+    url: https://qut.kz/pay/health
+    expectedStatusCodes: [200, 404]
+
+status-website:
+  # DNS-те CNAME status.qut.kz → kazprose.github.io қойылған соң cname-ді қосыңыз;
+  # оған дейін бет https://kazprose.github.io/qutpay-status/ адресінде ашылады.
+  # cname: status.qut.kz
+  baseUrl: /qutpay-status
+  logoUrl: https://qut.kz/og.png
+  name: Qut Pay — күйі
+  introTitle: "Qut Pay қызметінің күйі"
+  introMessage: "api.qut.kz, qut.kz және кабинеттің қолжетімділігі мен жауап уақыты. Тексеру 5 минут сайын, тарих ашық репода: github.com/kazprose/qutpay-status. Ақаулар мен жоспарлы жұмыстар осы жерде жарияланады."
+  navbar:
+    - title: Күйі
+      href: /
+    - title: Сайт
+      href: https://qut.kz
+    - title: Құжаттама
+      href: https://api.qut.kz/docs/guide/start
+    - title: GitHub
+      href: https://github.com/kazprose/qutpay-status
+  themeUrl: https://unpkg.com/@upptime/theme@latest/dist/main.css
+  theme: light
+
+i18n:
+  activeIncidents: Ашық ақаулар
+  allSystemsOperational: Барлық жүйе жұмыс істеп тұр
+  incidentReport: "Ақау #$NUMBER есебі"
+  activeIncidentSummary: "Ашылды $DATE, $POSTS жазба"
+  incidentTitle: "Ақау $NUMBER"
+  incidentDetails: Ақау туралы
+  incidentFixed: Шешілді
+  incidentOngoing: Әлі шешілмеген
+  incidentOpenedAt: Ашылды
+  incidentClosedAt: Жабылды
+  incidentSubscribe: Жаңартуларға жазылу
+  incidentViewOnGitHub: GitHub-та қарау
+  incidentCommentSummary: "$AUTHOR, $DATE"
+  incidentBack: ← Барлық ақаулар
+  pastIncidents: Өткен ақаулар
+  pastIncidentsResolved: "$MINUTES минутта шешілді, $POSTS жазба"
+  pastScheduledMaintenance: Өткен жоспарлы жұмыстар
+  scheduledMaintenance: Жоспарлы жұмыстар
+  scheduledMaintenanceSummaryStarted: "Басталды $DATE, $DURATION минут"
+  scheduledMaintenanceSummaryStarts: "Басталады $DATE, $DURATION минут"
+  liveStatus: Қазіргі күйі
+  overallUptime: "Жалпы қолжетімділік: $UPTIME"
+  overallUptimeTitle: Жалпы қолжетімділік
+  averageResponseTime: "Орташа жауап уақыты: $TIME мс"
+  averageResponseTimeTitle: Орташа жауап уақыты
+  sevenDays: 7 күн
+  thirtyDays: 30 күн
+  oneYear: 1 жыл
+  footer: "[Upptime]($UPPTIME_URL) арқылы, тарих [GitHub-та]($REPO_URL)"
+
+# Ақау туралы Telegram-ға хабар: репо secrets-іне NOTIFICATION_TELEGRAM_BOT_TOKEN және
+# NOTIFICATION_TELEGRAM_CHAT қосқан соң төмендегі екі жолды ашыңыз.
+# notifications:
+#   - type: telegram
