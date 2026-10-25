@@ -19,10 +19,8 @@ sites:
     expectedStatusCodes: [200, 404]
 
 status-website:
-  # DNS-те CNAME status.qut.kz → kazprose.github.io қойылған соң cname-ді қосыңыз;
-  # оған дейін бет https://kazprose.github.io/qutpay-status/ адресінде ашылады.
-  # cname: status.qut.kz
-  baseUrl: /qutpay-status
+  # DNS: CNAME status.qut.kz → kazprose.github.io (hoster.kz, 2026-10-25)
+  cname: status.qut.kz
   logoUrl: https://qut.kz/og.png
   name: Qut Pay — күйі
   introTitle: "Qut Pay қызметінің күйі"
