@@ -8,6 +8,9 @@ sites:
   - name: API (api.qut.kz/health)
     url: https://api.qut.kz/health
     expectedStatusCodes: [200]
+  - name: Kaspi төлемдері (счёт жасау)
+    url: https://api.qut.kz/health/payments
+    expectedStatusCodes: [200]
   - name: Сайт (qut.kz)
     url: https://qut.kz/
   - name: Кабинет (qut.kz/app/login)
@@ -24,7 +27,7 @@ status-website:
   logoUrl: https://qut.kz/og.png
   name: Qut Pay — күйі
   introTitle: "Qut Pay қызметінің күйі"
-  introMessage: "api.qut.kz, qut.kz және кабинеттің қолжетімділігі мен жауап уақыты. Тексеру 5 минут сайын, тарих ашық репода: github.com/kazprose/qutpay-status. Ақаулар мен жоспарлы жұмыстар осы жерде жарияланады."
+  introMessage: "api.qut.kz, qut.kz, кабинет және Kaspi арқылы счёт жасаудың қолжетімділігі мен жауап уақыты. «Kaspi төлемдері» қызыл болса — счёт уақытша жасалмайды, ақау өзі ашылып, шешілгенде жабылады. Тексеру 5 минут сайын, тарих ашық репода: github.com/kazprose/qutpay-status. Ақаулар мен жоспарлы жұмыстар осы жерде жарияланады."
   navbar:
     - title: Күйі
       href: /
